@@ -11,7 +11,7 @@ public class SharedPreferencesHandler {
 	private static final String MIGRATED_TO_NATIVE_STORAGE_KEY = "_SS_MIGRATED_TO_NATIVE_STORAGE";
 
 	public SharedPreferencesHandler (String prefsName, Context ctx){
-		prefs = ctx.getSharedPreferences(prefsName, 0);
+		prefs = ctx.getSharedPreferences(prefsName, ctx.MODE_PRIVATE);
 	}
 
     void store(String key, String value){
